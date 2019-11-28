@@ -37,11 +37,11 @@ spec:
   # Hence it will not be able to connect to Pods with the ``old'' password.
   # In scenarios when persistence is turned off all the data will be lost
   # during password rotation.
-  password:
-    # More info: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.14/#secretkeyselector-v1-core
-    secretKeyRef:
-      key: password
-      name: {{ amaizfinance_redis_cr_password }}
+#  password:
+#    # More info: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.14/#secretkeyselector-v1-core
+#    secretKeyRef:
+#      key: password
+#      name: {{ amaizfinance_redis_cr_password }}
 
   # affinity, annotations, securityContext, tolerations and priorityClassName (all optional)
   # are added to the resulting StatefulSet's PodTemplate.
