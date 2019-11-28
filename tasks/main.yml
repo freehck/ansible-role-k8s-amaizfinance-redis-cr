@@ -1,0 +1,5 @@
+- name: put k8s_v1alpha1_redis_cr.yml
+  template: src=k8s_v1alpha1_redis_cr.yml dest=/root/k8s_v1alpha1_redis_cr.yml
+
+- name: apply k8s_v1alpha1_redis_cr.yml
+  command: kubectl apply -f /root/k8s_v1alpha1_redis_cr.yml -n {{ k8s_namespace }}
