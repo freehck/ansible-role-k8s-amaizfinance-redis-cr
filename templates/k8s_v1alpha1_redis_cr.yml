@@ -46,18 +46,18 @@ spec:
   # affinity, annotations, securityContext, tolerations and priorityClassName (all optional)
   # are added to the resulting StatefulSet's PodTemplate.
   # More info: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.14/#podspec-v1-core
-  affinity:
-    podAntiAffinity:
-      preferredDuringSchedulingIgnoredDuringExecution:
-      - podAffinityTerm:
-          labelSelector:
-            matchExpressions:
-            - key: lol
-              operator: In
-              values:
-              - woot
-          topologyKey: kubernetes.io/hostname
-        weight: 70
+#  affinity:
+#    podAntiAffinity:
+#      preferredDuringSchedulingIgnoredDuringExecution:
+#      - podAffinityTerm:
+#          labelSelector:
+#            matchExpressions:
+#            - key: lol
+#              operator: In
+#              values:
+#              - woot
+#          topologyKey: kubernetes.io/hostname
+#        weight: 70
   annotations:
     cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
