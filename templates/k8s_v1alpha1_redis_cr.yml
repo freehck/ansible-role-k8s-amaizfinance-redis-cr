@@ -41,7 +41,7 @@ spec:
 #    # More info: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.14/#secretkeyselector-v1-core
 #    secretKeyRef:
 #      key: password
-#      name: {{ amaizfinance_redis_cr_password }}
+#      name: amaizfinance_redis_cr_password
 
   # affinity, annotations, securityContext, tolerations and priorityClassName (all optional)
   # are added to the resulting StatefulSet's PodTemplate.
