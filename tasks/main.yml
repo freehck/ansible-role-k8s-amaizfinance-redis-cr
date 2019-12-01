@@ -1,5 +1,8 @@
-- name: put k8s_v1alpha1_redis_cr.yml
-  template: src=k8s_v1alpha1_redis_cr.yml dest=/root/k8s_v1alpha1_redis_cr.yml
+- name: templating manifest {{ k8s_amaizfinance_redis_cr_manifest_template }}
+  template:
+    src: "{{ k8s_amaizfinance_redis_cr_manifest_template }}"
+    dest: "/root/{{ k8s_amaizfinance_redis_cr_manifest_file }}"
 
-- name: apply k8s_v1alpha1_redis_cr.yml
-  command: kubectl apply -f /root/k8s_v1alpha1_redis_cr.yml -n {{ k8s_namespace }}
+- name: apply {{ k8s_amaizfinance_redis_cr_manifest_file }}
+  command: kubectl apply -f /root/{{ k8s_amaizfinance_redis_cr_manifest_file }} -n {{ k8s_amaizfinance_redis_cr_namespace }}
+  # TODO: when you use command module, it's mandatory to use register and changed_when directives.

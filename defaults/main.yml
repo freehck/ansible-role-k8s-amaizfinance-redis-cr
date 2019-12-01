@@ -1,1 +1,5 @@
-amaizfinance_redis_cr_replicas: 3
+k8s_amaizfinance_redis_cr_replicas: "3"
+k8s_amaizfinance_redis_cr_manifest_template: "k8s_v1alpha1_redis_cr.yml"
+k8s_amaizfinance_redis_cr_manifest_file: "k8s_v1alpha1_redis_cr.yml"
+k8s_amaizfinance_redis_cr_namespace: "default"
+k8s_amaizfinance_redis_cr_name: "redis"

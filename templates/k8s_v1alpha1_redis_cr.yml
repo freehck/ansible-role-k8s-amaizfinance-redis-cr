@@ -5,13 +5,13 @@ metadata:
   # the .metadata.labels will be added to all generated resources along with the
   # redis=example label
   labels:
-    lol: woot
+    redis_cr_name: {{ k8s_amaizfinance_redis_cr_name }}
   # the name of the Redis resource will be used as a label for all generated resources,
   # and as the infix or suffix for them.
-  name: {{ amaizfinance_redis_cr_name }}
+  name: {{ k8s_amaizfinance_redis_cr_name }}
 spec:
   # required field. Minimum value is 3
-  replicas: {{ amaizfinance_redis_cr_replicas }}
+  replicas: {{ k8s_amaizfinance_redis_cr_replicas }}
 
   # config is a set of key-value pairs needed for configuring Redis instances. (optional)
   # keys and values should be string values
